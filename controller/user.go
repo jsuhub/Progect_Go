@@ -49,6 +49,7 @@ func PassUser(c *gin.Context) {
 }
 
 func CreateUser(c *gin.Context) {
+	log.Println("接收到了请求")
 	var user model.User
 	if err := c.ShouldBindJSON(&user); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})

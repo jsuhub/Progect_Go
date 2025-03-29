@@ -16,4 +16,5 @@ func InitDB() {
 		log.Fatal(err)
 	}
 	log.Println("数据库初始化成功", DB)
+
 }
